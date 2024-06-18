@@ -5,36 +5,56 @@
 }
 :root{
   /* primary shades */
-  --clr-primary-1:#d4e8ff;
-  --clr-primary-2:#63c3ff;
-  --clr-primary-3:#b0d7e6;
-  /* secondary shades */
-  --clr-secondary-1:#e7fffe;
-  --clr-secondary-2:#FEFFFF;
-  --clr-secondary-3:#cecece;
+  --clr-primary-1:#90a58b;
+  --clr-primary-2:#c1dabc;
+  --clr-primary-3:#d4f1cf;
+  /* secondary shades (nav bar/ highlights)*/
+  --clr-secondary-1:#7c7c7c;
+  --clr-secondary-2:#919191;
+  --clr-secondary-3:#f6fff5;
   /* black and white */
   --clr-black: #222;
   --clr-white: #fff;
+  /* links + buttons */
+  --clr-hover: #7ff16b;
 }
 /*==================
 navigation bar
 ==================*/
 nav{
-  background-color: var(--clr-primary-1);
+  background: linear-gradient(180deg,var(--clr-secondary-1),var(--clr-secondary-2));
+  box-shadow: 0 0 20px var(--clr-black);
+  padding: 10px 0;
   display: grid;
+  align-items: center;
+  text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
+  height: 50px;
+}
+.nav-title-container{
+  grid-column: 1/2;
+}
+.nav-title-container h2{
+  color: var(--clr-white);
+  font-weight: 400;
 }
 .nav-logo-container{
+  grid-column: 2/3;
 }
-.nav-logo{
-  max-width: 50px;
-}
-.nav-links-container h2{
-  font-size: 10px;
+.nav-logo-container img{
+  height: 45px;
 }
 .nav-links-container{
   grid-column: 3/3 ;
 }
-
+.nav-links-container a{
+  font-size: 20px;
+  color: var(--clr-white);
+  text-decoration: none;
+  margin: 0 20px 0 0;
+}
+.nav-links-container a:hover{
+  color: var(--clr-hover);
+}
 
 
