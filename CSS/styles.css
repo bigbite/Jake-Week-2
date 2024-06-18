@@ -31,13 +31,14 @@ body{
 /*==================
 navigation bar
 ==================*/
-nav{
+header{
   background: linear-gradient(180deg,var(--clr-secondary-1),var(--clr-secondary-2));
   box-shadow: 0 0 20px var(--clr-black);
   display: grid;
   align-items: center;
   text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
   height: 60px;
 }
 /* nav title */
@@ -46,6 +47,7 @@ nav{
 }
 .nav-title-container h1{
   color: var(--clr-white);
+  font-size: 25px;
   font-weight: 400;
 }
 /* nav logo */
@@ -56,16 +58,17 @@ nav{
   height: 45px;
 }
 /* nav links */
-.nav-links-container{
+nav{
   grid-column: 3/3 ;
 }
-.nav-links-container a{
-  font-size: 20px;
+nav a{
+  font-size: 25px;
   color: var(--clr-white);
   text-decoration: none;
-  margin: 0 20px 0 0;
+  padding:0 10px;
+  border-right: 2px solid var(--clr-white);
 }
-.nav-links-container a:hover{
+nav a:hover{
   color: var(--clr-hover);
 }
 /*===============
@@ -74,8 +77,6 @@ INDEX.HTML
 /*--------------
 background image
 --------------*/
-.background-img{
-}
 .background-img img{
   display: block;
   margin: 30px auto;
@@ -138,3 +139,6 @@ section.benefits h2{
 .benefit-card p{
   padding: 10px 0;
 }
+/*============
+tips section
+============*/
