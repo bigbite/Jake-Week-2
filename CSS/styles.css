@@ -26,6 +26,7 @@ h1,h2,h3{
 }
 body{
   background-color: var(--clr-white);
+  overscroll-behavior-y: none;
 }
 
 /*==================
@@ -165,4 +166,13 @@ section.tips h2{
 }
 .tips-text-container h3{
   margin-bottom: 10px;
+}
+/*============
+footer
+============*/
+footer{
+  background: linear-gradient(180deg,var(--clr-secondary-2),var(--clr-secondary-1));
+  text-align: center;
+  padding: 20px 0;
+  color: var(--clr-white);
 }
