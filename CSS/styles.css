@@ -91,11 +91,25 @@ benefits section
 ==============*/
 section.benefits{
   background: var(--clr-primary-2);
-
 }
-.benefits-card-container{
-
+section.benefits h2{
+  text-align: center;
+  padding: 10px 0 25px 0;
+}
+.benefit-card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 20px;
 }
 .benefit-card{
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  max-width: 400px;
+  background: var(--clr-secondary-2);
+  padding: 10px;
+  border-radius: 10px;
 }
-
