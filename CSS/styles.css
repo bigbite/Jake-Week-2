@@ -9,7 +9,7 @@ h1,h2,h3{
 }
 :root{
   /* primary shades */
-  --clr-primary-1:#90a58b;
+  --clr-primary-1:#abc2a5;
   --clr-primary-2:#c1dabc;
   --clr-primary-3:#d4f1cf;
   /* secondary shades (nav bar/ highlights)*/
@@ -86,3 +86,16 @@ section.introduction p{
 section.introduction p span{
   font-weight: 600;
 }
+/*==============
+benefits section
+==============*/
+section.benefits{
+  background: var(--clr-primary-2);
+
+}
+.benefits-card-container{
+
+}
+.benefit-card{
+}
+
