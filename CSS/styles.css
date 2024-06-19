@@ -17,7 +17,10 @@ Global Styles
   --clr-hover: #7ff16b;
   --clr-btn-border:#b6c2ff;
   --clr-btn-hover:#e2e7ff;
-
+  /* dropdown content colors */
+  --clr-dropdown-samaritans: #22841a;
+  --clr-dropdown-mind: #3d4cd2;
+  --clr-dropdown-shout: #7f3592;
   /* Font Variables*/
   --font-roboto-mono: 'Roboto Mono', monospace;
   --font-roboto-serif: 'Roboto', sans-serif;
@@ -249,14 +252,33 @@ helplines dropdown section
   text-align: center;
   margin: 25px 0;
 }
-.dropdown-container{
+.helplines-dropdown-container{
   display: flex;
   align-content: center;
-  justify-content:space-evenly ;
+  justify-content:space-evenly;
+}
+/* dropdown styling */
+.helplines-dropdown{
+  width: 350px;
+}
+.helplines-dropdown img{
+  max-width: 100%;
+  max-height: 75px;
 }
 .dropdown-content{
   display: block;
 }
+/* individual content styling (colors) */
+.helplines-dropdown-samaritans{
+  background: var(--clr-dropdown-samaritans);
+}
+.helplines-dropdown-mind{
+  background: var(--clr-dropdown-mind);
+}
+.helplines-dropdown-shout{
+  background: var(--clr-dropdown-shout);
+}
+/* hides content by default */
 .dropdown-content-hide{
   display: none;
 }
