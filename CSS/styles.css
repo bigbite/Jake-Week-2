@@ -15,8 +15,8 @@ Global Styles
   --clr-white: #fff;
   /* links + buttons */
   --clr-hover: #7ff16b;
-  --clr-btn-border:#7c92ff;
-  --clr-btn-hover:#dfe4ff;
+  --clr-btn-border:#b6c2ff;
+  --clr-btn-hover:#e2e7ff;
 
   /* Font Variables*/
   --font-roboto-mono: 'Roboto Mono', monospace;
