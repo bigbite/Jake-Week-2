@@ -50,6 +50,10 @@ body{
 .regular-btn:hover{
   background: var(--clr-btn-hover);
 }
+.bold-p-text{
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
 /*==================
 navigation bar
 ==================*/
@@ -243,7 +247,7 @@ section.resources-intro{
 .intro-text h1{
   font-size: 45px;
   text-shadow: 1px 1px 4px var(--clr-secondary-1), -1px -1px 4px var(--clr-secondary-2);
-  color: var(--clr-btn-hover);
+  color: var(--clr-white);
 }
 /*======================
 helplines dropdown section
@@ -255,30 +259,47 @@ helplines dropdown section
 .helplines-dropdown-container{
   display: flex;
   align-content: center;
-  justify-content:space-evenly;
+  justify-content:center;
+  gap: 75px;
 }
-/* dropdown styling */
 .helplines-dropdown{
-  width: 350px;
+  width: 400px;
 }
-.helplines-dropdown img{
-  max-width: 100%;
-  max-height: 75px;
-}
-.dropdown-content{
-  display: block;
+/* dropdown button */
+.dropdown-btn{
+  padding: 10px 0;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  width: 400px;
+  font-family: var(--font-roboto-mono);
+  color: var(--clr-white);
+  letter-spacing: 0.25rem;
 }
 /* individual content styling (colors) */
-.helplines-dropdown-samaritans{
-  background: var(--clr-dropdown-samaritans);
+/* samaritans */
+.dropdown-btn-samaritans{
+  background-color: var(--clr-dropdown-samaritans);
 }
-.helplines-dropdown-mind{
-  background: var(--clr-dropdown-mind);
+/* mind */
+.dropdown-btn-mind{
+  background-color: var(--clr-dropdown-mind);
 }
-.helplines-dropdown-shout{
-  background: var(--clr-dropdown-shout);
+/* giveusashout */
+.dropdown-btn-shout{
+  background-color: var(--clr-dropdown-shout);
 }
-/* hides content by default */
+/* display show */
+.dropdown-content-show{
+  display: block;
+}
+.dropdown-content-show div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--clr-secondary-3);
+}
+/* toggle visibility */
 .dropdown-content-hide{
   display: none;
 }
