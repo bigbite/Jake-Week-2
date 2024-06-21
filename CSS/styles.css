@@ -1,0 +1,212 @@
+/*============
+Global Styles
+============*/
+:root{
+  /* primary shades */
+  --clr-primary-1:#abc2a5;
+  --clr-primary-2:#e2e7ff;
+  --clr-primary-3:#fcfdff;
+  /* secondary shades (nav bar/ highlights)*/
+  --clr-secondary-1:#353535;
+  --clr-secondary-2:#4d4d4d;
+  --clr-secondary-3:#bababa;
+  /* black and white */
+  --clr-black: #222;
+  --clr-white: #fff;
+  /* links + buttons */
+  --clr-hover: #7ff16b;
+  --clr-btn-border:#7c92ff;
+  --clr-btn-hover:#dfe4ff;
+
+  /* Font Variables*/
+  --font-roboto-mono: 'Roboto Mono', monospace;
+  --font-roboto-serif: 'Roboto', sans-serif;
+}
+*,*::after,*::before{
+  font-family: var(--font-roboto-serif);
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+h1,h2,h3{
+  font-family: var(--font-roboto-mono);
+}
+body{
+  background-color: var(--clr-white);
+  overscroll-behavior-y: none;
+}
+.regular-btn{
+  background: transparent;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-family: var(--font-roboto-mono);
+  border: 2px solid var(--clr-btn-border);
+  transition: 0.25s;
+  cursor: pointer;
+}
+.regular-btn:hover{
+  background: var(--clr-btn-hover);
+}
+/*==================
+navigation bar
+==================*/
+header{
+  background: linear-gradient(180deg,var(--clr-secondary-1),var(--clr-secondary-2));
+  box-shadow: 0 0 20px var(--clr-black);
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+  height: 60px;
+}
+/* nav title */
+.nav-title-container{
+  grid-column: 1/2;
+}
+.nav-title-container h1{
+  color: var(--clr-white);
+  font-size: 25px;
+  font-weight: 400;
+}
+/* nav logo */
+.nav-logo-container{
+  grid-column: 2/3;
+}
+.nav-logo-container img{
+  height: 45px;
+}
+/* nav links */
+nav{
+  grid-column: 3/3 ;
+}
+nav a{
+  font-size: 25px;
+  color: var(--clr-white);
+  text-decoration: none;
+  padding:0 10px;
+  border-right: 2px solid var(--clr-white);
+}
+nav a:hover{
+  color: var(--clr-hover);
+}
+
+/*============
+footer
+============*/
+footer{
+  background: linear-gradient(180deg,var(--clr-secondary-2),var(--clr-secondary-1));
+  text-align: center;
+  padding: 20px 0;
+  color: var(--clr-white);
+}
+
+/*=========================
+INDEX.HTML
+===========================*/
+
+/*==============
+background image
+==============*/
+.background-img img{
+  display: block;
+  margin: 30px auto;
+  width: 50%;
+}
+/*===============
+introduction section
+===============*/
+section.introduction{
+  text-align: center;
+  padding: 20px 80px 90px 80px;
+}
+section.introduction h2{
+  font-weight: 400;
+  font-size: 45px;
+  margin: 0 0 25px 0;
+}
+section.introduction p{
+  font-size: 18px;
+}
+section.introduction p span{
+  font-weight: 600;
+}
+/*==============
+benefits section
+==============*/
+section.benefits{
+  background: var(--clr-primary-2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section.benefits h2{
+  text-align: center;
+  padding: 10px 0 25px 0;
+}
+.benefit-card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 20px;
+}
+/* card styling */
+.benefit-card{
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  max-width: 400px;
+  background: var(--clr-white);
+  border: 1px solid var(--clr-secondary-1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  border-radius: 10px;
+}
+.benefit-card:hover{
+  transform: scale(1.1);
+  transition: 0.25s;
+}
+/* card content styling */
+.benefit-card h3{
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid var(--clr-black);
+}
+.benefit-card p{
+  padding: 10px 0;
+}
+/*=================
+benefits section modal
+=================*/
+
+/*============
+tips section
+============*/
+section.tips{
+  margin: 75px 0 ;
+}
+section.tips h2{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+/* img left - text right tip container */
+.tips-container{
+  display: flex;
+  max-width: 1200px;
+  margin: 25px auto;
+  border: 1px solid var(--clr-secondary-3);
+}
+.tips-container img{
+  width: 20%;
+}
+.tips-text-container{
+  margin: auto 20px;
+}
+.tips-text-container h3{
+  margin-bottom: 10px;
+}
+.tips-container:hover{
+  background: var(--clr-primary-2);
+  transform: scale(1.1);
+  transition: 0.25s;
+}
