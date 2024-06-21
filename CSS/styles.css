@@ -3,7 +3,7 @@ Global Styles
 ============*/
 :root{
   /* primary shades */
-  --clr-primary-1:#abc2a5;
+  --clr-primary-1:#5a12c4;
   --clr-primary-2:#e2e7ff;
   --clr-primary-3:#fcfdff;
   /* secondary shades (nav bar/ highlights)*/
@@ -22,6 +22,9 @@ Global Styles
   --clr-dropdown-mind: #4550b4;
   --clr-dropdown-shout: #922faa;
   /* Font Variables*/
+  /* links */
+  --clr-link-purple: #dd22ee;
+  --clr-link-blue: #6a46f8;
   --font-roboto-mono: 'Roboto Mono', monospace;
   --font-roboto-serif: 'Roboto', sans-serif;
 }
@@ -249,11 +252,23 @@ section.resources-intro{
   text-shadow: 1px 1px 4px var(--clr-secondary-1), -1px -1px 4px var(--clr-secondary-2);
   color: var(--clr-white);
 }
+/*===============
+info paragraph
+===============*/
+.info-paragraph{
+  margin: 50px 200px 0;
+  text-align: center;
+}
+.info-paragraph h3{
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
 /*======================
 helplines dropdown section
 ======================*/
 .helplines{
-  margin: 20px 0;
+  margin: 50px 0 100px 0;
 }
 .helplines h2{
   text-align: center;
@@ -332,7 +347,35 @@ helplines dropdown section
 /*==================
 educational section
 ==================*/
-educational-container{
-  display: flex;
-  background: var(--clr-secondary-1);
+.educational{
+  margin: 0 100px;
+  border-top: 2px solid var(--clr-black);
+  border-bottom: 2px solid var(--clr-black);
 }
+.education-container{
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.education-container img{
+  max-width: 30%;
+}
+.education-container-details{
+  margin: 5px 15px;
+}
+.education-container-details h3{
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+}
+.education-container-details p{
+  margin: 10px 0 20px 0;
+}
+.education-container-details a{
+  text-decoration: none;
+  color: var(--clr-white);
+  background-image: linear-gradient(45deg,var(--clr-link-blue),var(--clr-link-purple));
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
