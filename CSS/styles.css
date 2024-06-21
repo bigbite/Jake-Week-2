@@ -27,11 +27,10 @@ Global Styles
   --clr-link-blue: #6a46f8;
   /* required red */
   --clr-required-red: #c62222;
-  --font-roboto-mono: 'Roboto Mono', monospace;
-  --font-roboto-serif: 'Roboto', sans-serif;
+  --font-roboto-mono: 'Merriweather', serif;
 }
 *{
-  font-family: var(--font-roboto-serif);
+  font-family: var(--font-roboto-mono);
   box-sizing: border-box;
   margin: 0;
   border: 0;
@@ -368,7 +367,6 @@ educational section
   margin: 5px 15px;
 }
 .education-container-details h3{
-  letter-spacing: 0.1rem;
   font-size: 1.4rem;
 }
 .education-container-details p{
@@ -421,21 +419,29 @@ treatments section
 CONTACT.HTML
 ============================*/
 .contact-intro{
-  margin: 40px auto;
+  margin: 50px auto 30px;
   width: 60%;
   text-align: center;
 }
 .contact-intro h1{
-  font-size: 3rem;
-  margin-bottom: 30px;
+  font-size: 4rem;
+}
+/*===============
+page container (in order to achieve left | right)
+===============*/
+.contact-page-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 90px;
 }
 /*============
 form section
 ============*/
 form{
   width: 45%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 25px 20px;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  background-color: var(--clr-primary-2);
+  padding: 0 20px 25px;
 }
 .contact-form-group{
   padding: 25px 0;
@@ -459,12 +465,6 @@ form{
   font-family: var(--font-roboto-mono);
   font-size: 1.1rem;
 }
-.contact-checkbox{
-  text-align: center;
-}
-.contact-submit-btn{
-  text-align: center;
-}
 /* required / invalid color class */
 .required-red{
   color: var(--clr-required-red);
@@ -475,4 +475,12 @@ form{
 .contact-form-subheading{
   font-style: italic;
   font-weight: 300;
+}
+/*===============
+contact information section
+===============*/
+.contact-information-section{
+  background-color: #f3f5ff;
+  padding: 25px 30px;
+  width: 35%;
 }
