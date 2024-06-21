@@ -414,3 +414,51 @@ treatments section
 .treatments-container div{
   margin: 15px 0;
 }
+
+/*============================
+CONTACT.HTML
+============================*/
+.contact-intro{
+  margin: 40px auto;
+  width: 60%;
+  text-align: center;
+}
+.contact-intro h1{
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+/*============
+form section
+============*/
+form{
+  width: 45%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 25px 20px;
+}
+.contact-form-group{
+  padding: 25px 0;
+}
+.contact-input{
+  border: 2px solid var(--clr-secondary-3);
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 100%;
+  font-family: var(--font-roboto-mono);
+  font-size: 1.1rem;
+}
+.contact-input-textarea{
+  border: 2px solid var(--clr-secondary-3);
+  border-radius: 5px;
+  width: 100%;
+  height: 100px;
+  padding: 5px 10px;
+  font-family: var(--font-roboto-mono);
+  font-size: 1.1rem;
+}
+.contact-checkbox{
+  text-align: center;
+}
+.contact-submit-btn{
+  text-align: center;
+}
+
