@@ -25,6 +25,8 @@ Global Styles
   /* links */
   --clr-link-purple: #dd22ee;
   --clr-link-blue: #6a46f8;
+  /* required red */
+  --clr-required-red: #c62222;
   --font-roboto-mono: 'Roboto Mono', monospace;
   --font-roboto-serif: 'Roboto', sans-serif;
 }
@@ -442,6 +444,7 @@ form{
   border: 2px solid var(--clr-secondary-3);
   border-radius: 5px;
   padding: 5px 10px;
+  margin: 5px 0;
   width: 100%;
   font-family: var(--font-roboto-mono);
   font-size: 1.1rem;
@@ -452,6 +455,7 @@ form{
   width: 100%;
   height: 100px;
   padding: 5px 10px;
+  margin: 5px 0;
   font-family: var(--font-roboto-mono);
   font-size: 1.1rem;
 }
@@ -461,4 +465,14 @@ form{
 .contact-submit-btn{
   text-align: center;
 }
-
+/* required / invalid color class */
+.required-red{
+  color: var(--clr-required-red);
+}
+.invalid-answer{
+  color: var(--clr-required-red);
+}
+.contact-form-subheading{
+  font-style: italic;
+  font-weight: 300;
+}

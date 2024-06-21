@@ -46,32 +46,32 @@
 	<section class="page-container">
 		<form>
 			<div class="contact-form-group">
-				<label for="name">Full Name<span class="required-red">*</span></label>
+				<label for="name">Full Name<span class="required-red"> *</span></label>
 				<br>
 				<input class="contact-input" id='user-name' type="text" name="user_name" required>
 				<br>
-				<span id="name-input-subheading">Minimum 5 characters</span>
+				<span class="contact-form-subheading" id="name-input-subheading">Minimum 5 characters</span>
 			</div>
 			<div class="contact-form-group">
-				<label for=" email">Email<span class="required-red">*</span></label>
+				<label for=" email">Email<span class="required-red"> *</span></label>
 				<br>
 				<input class="contact-input" id='user-email' type="email" name="user_email" required>
 				<br>
-				<span id="email-input-subheading">Maximum of 255 characters, includes '@' </span>
+				<span class="contact-form-subheading" id="email-input-subheading">Maximum of 255 characters, includes '@' </span>
 			</div>
 			<div class="contact-form-group">
-				<label for="message">Reason for contacting us</label>
+				<label for="message">Reason for contacting us<span class="required-red"> *</span></label>
 				<br>
-				<textarea class="contact-input-textarea" id='user-message' name="user_message"></textarea>
+				<textarea class="contact-input-textarea" id='user-message' name="user_message" required></textarea>
 				<br>
-				<span id="msg-input-subheading" ">Minimum 50 characters, maximum of 500 characters</span>
+				<span class="contact-form-subheading" id="msg-input-subheading" ">Minimum 50 characters, maximum of 500 characters</span>
 			</div>
 			<div class=" contact-form-group contact-checkbox">
-					<label>Please accept our Terms & Conditions<span class=" required-red">*</span></label>
+					<label>Please accept our Terms & Conditions<span class=" required-red"> *</span></label>
 					<br>
 					<input id="user-checkbox" type="checkbox" name="terms_and_conditions" required>
 					<br>
-					<span id="checkbox-subheading">This checkbox must be ticked</span>
+					<span class="contact-form-subheading" id="checkbox-subheading">This checkbox must be ticked</span>
 			</div>
 			<div class="contact-form-group contact-submit-btn">
 				<input type="submit" id="submit-btn" class="submit-btn" disabled>
