@@ -252,6 +252,9 @@ section.resources-intro{
 /*======================
 helplines dropdown section
 ======================*/
+.helplines{
+  margin: 20px 0;
+}
 .helplines h2{
   text-align: center;
   margin: 25px 0;
@@ -327,5 +330,9 @@ helplines dropdown section
   opacity: 0;
 }
 /*==================
-image carousel section
+educational section
 ==================*/
+educational-container{
+  display: flex;
+  background: var(--clr-secondary-1);
+}

@@ -3,7 +3,6 @@ const dropDownBtns = document.querySelectorAll('.dropdown-btn');
 const dropDownContentSamaritans = document.querySelector('#dropdown-content-samaritans');
 const dropDownContentMind = document.querySelector('#dropdown-content-mind');
 const dropDownContentShout = document.querySelector('#dropdown-content-shout');
-
 /*
 changed the functionality of the javascript to incorporate a drop down arrow easier
 but also to clean up the css classes slightly
