@@ -18,6 +18,8 @@
 	<script src="js/app.js" defer></script>
 	<!-- light / dark mode theme -->
 	<script src="js/theme.js" defer></script>
+	<!-- index modals -->
+	<script src="js/indexModals.js" defer></script>
 </head>
 
 <body>
@@ -50,25 +52,49 @@
 			<div class="benefit-card">
 				<h3>Reduced Stigma</h3>
 				<p>Raising awareness helps reduce the stigma associated with mental health conditions, making it easier for individuals to seek help.</p>
-				<button id="benefits-btn-stigma" class="regular-btn">learn more</button>
+				<button id="benefits-btn-stigma" class="regular-btn modal-stigma benefits-modal-btn">learn more</button>
 			</div>
 			<div class="benefit-card">
 				<h3>Improved Well-being</h3>
 				<p>Understanding mental health promotes better overall well-being and can prevent mental health issues from worsening.</p>
-				<button id="benefits-btn-wellbeing" class="regular-btn">learn more</button>
+				<button id="benefits-btn-wellbeing" class="regular-btn modal-wellbeing benefits-modal-btn">learn more</button>
 			</div>
 			<div class="benefit-card">
 				<h3>Enhanced Support</h3>
 				<p>Awareness leads to better support systems within communities, workplaces, and schools, providing help to those in need.</p>
-				<button id="benefits-btn-support" class="regular-btn">learn more</button>
+				<button id="benefits-btn-support" class="regular-btn modal-support benefits-modal-btn">learn more</button>
 			</div>
 		</div>
 	</section>
 	<!-- benefits of mental health modals (hidden by default) -->
-	<section class="benefits-modal-container">
-		<div id="modal-stigma" class="benefits-modal"></div>
-		<div id="modal-wellbeing" class="benefits-modal"></div>
-		<div id="modal-support" class="benefits-modal"></div>
+	<section id="modal-container" class="benefits-modal-container-hide">
+		<div id="modal-stigma" class="benefits-modal-hide modal-stigma">
+			<button class="close-modal-stigma benefits-modal-close-btn">close modal</button>
+			<h3>Helping to Reduce Stigma</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eum. Pariatur mollitia labore molestias nobis maiores inventore sequi totam fugit. Iusto animi explicabo, repellendus neque illo alias consequatur ducimus! Minima.</p>
+			<a>www.example-link</a>
+			<a>www.example-link</a>
+			<a>www.example-link</a>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nisi fuga cum libero optio vero.</p>
+		</div>
+		<div id="modal-wellbeing" class="benefits-modal-hide modal-wellbeing">
+			<button class="close-modal-wellbeing benefits-modal-close-btn">close modal</button>
+			<h3>Improving Well-being</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eum. Pariatur mollitia labore molestias nobis maiores inventore sequi totam fugit. Iusto animi explicabo, repellendus neque illo alias consequatur ducimus! Minima.</p>
+			<a>www.example-link</a>
+			<a>www.example-link</a>
+			<a>www.example-link</a>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nisi fuga cum libero optio vero.</p>
+		</div>
+		<div id="modal-support" class="benefits-modal-hide modal-support">
+			<button class="close-modal-support benefits-modal-close-btn">close modal</button>
+			<h3>Enhancing Support</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, eum. Pariatur mollitia labore molestias nobis maiores inventore sequi totam fugit. Iusto animi explicabo, repellendus neque illo alias consequatur ducimus! Minima.</p>
+			<a>www.example-link</a>
+			<a>www.example-link</a>
+			<a>www.example-link</a>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nisi fuga cum libero optio vero.</p>
+		</div>
 	</section>
 	<!-- Tips list + images -->
 	<section class="tips">

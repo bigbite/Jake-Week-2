@@ -39,7 +39,7 @@ Dark Mode
   /* primary shades */
   --clr-primary-1:#5a12c4;
   --clr-primary-2:#6976ba;
-  --clr-primary-3:#8394b7;
+  --clr-primary-3:#576b93;
   /* secondary shades (nav bar/ highlights)*/
   --clr-secondary-1:#353535;
   --clr-secondary-2:#141414;
@@ -261,8 +261,31 @@ section.benefits h2{
   padding: 10px 0;
 }
 /*=================
-benefits section modal
+benefits section modals
 =================*/
+/* hidden by default */
+.benefits-modal-container-hide{
+  display: none;
+}
+.benefits-modal-hide{
+  display: none;
+}
+.benefits-modal-container-show{
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  align-content: center;
+}
+.benefits-modal-show{
+  background-color: var(--clr-white);
+  margin: 0 auto;
+  width: 45%;
+}
+/* benefits section modals end */
 /*============
 tips section
 ============*/
