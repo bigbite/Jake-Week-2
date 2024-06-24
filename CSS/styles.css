@@ -31,6 +31,77 @@ Global Styles
   /* box shadow */
   --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }
+/*==================
+Dark Mode
+==================*/
+.is-dark-mode{
+  /* primary shades */
+  --clr-primary-1:#5a12c4;
+  --clr-primary-2:#6976ba;
+  --clr-primary-3:#b5c6e9;
+  /* secondary shades (nav bar/ highlights)*/
+  --clr-secondary-1:#353535;
+  --clr-secondary-2:#4d4d4d;
+  --clr-secondary-3:#bababa;
+  /* black and white */
+  --clr-black: #fff;
+  --clr-white: #222;
+  /* links + buttons */
+  --clr-hover: #7ff16b;
+  --clr-btn-border:#b6c2ff;
+  --clr-btn-hover:#e2e7ff;
+}
+/*=============
+dark mode button
+=============*/
+.theme-toggle-btn{
+  position: relative;
+  margin-right: 50px;
+  border: 0;
+  width: 80px;
+  height: 30px;
+  border-radius: 40px;
+  background: var(--clr-lm-light-bg);
+  box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+}
+/*
+#theme-toggle-btn::before{
+  content: '';
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  background: orangered;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+  */
+
+.theme-toggle-btn-sprite{
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  transition: 0.5s linear all;
+}
+
+.theme-state-light{
+  background: #ee5f12;
+  /*margin: 0 auto 0 5px;*/
+  top: 50%;
+  left: 5px;
+  transform: translateX(0%);
+}
+
+.theme-state-dark{
+  background: #000000;
+  /*margin: 0 5px 0 auto;*/
+  top: 50%;
+  left: 5px;
+  transform: translateX(180%);
+}
+/* dark mode button end*/
+
 *{
   font-family: var(--font-roboto-mono);
   box-sizing: border-box;
@@ -112,8 +183,19 @@ footer{
   text-align: center;
   padding: 20px 0;
   color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
+/*=====
+contact.html footer
+=====*/
+.contact-page-footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 /*=========================
 INDEX.HTML
 ===========================*/
@@ -532,15 +614,6 @@ social media section
   background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-/*===============
-contact.html footer
-===============*/
-.contact-page-footer{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 /*================
 theme toggle btn
