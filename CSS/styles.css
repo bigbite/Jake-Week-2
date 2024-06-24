@@ -122,6 +122,13 @@ body{
   font-weight: 600;
   letter-spacing: 0.1rem;
 }
+.bold-p-text-modal{
+  font-weight: 600;
+}
+.small-p-text-modal{
+  font-weight: 500;
+  font-size: 0.75rem;
+}
 /*==================
 navigation bar
 ==================*/
@@ -270,6 +277,7 @@ benefits section modals
 .benefits-modal-hide{
   display: none;
 }
+/* modal styling */
 .benefits-modal-container-show{
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -283,7 +291,53 @@ benefits section modals
 .benefits-modal-show{
   background-color: var(--clr-white);
   margin: 0 auto;
-  width: 45%;
+  width: 55%;
+  border: solid var(--clr-primary-2);
+  border-width: 0 5px 5px 5px;
+  border-radius: 5px;
+}
+/*==============
+benefits modal content styling
+==============*/
+.benefits-modal-content-intro{
+  padding: 20px 10px;
+  font-weight: 200;
+  line-height: 1.4rem;
+}
+.benefits-modal-content-summary{
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 15px 5px;
+}
+.benefits-modal-content-list{
+  padding-bottom: 20px;
+  font-weight: 300;
+}
+.benefits-modal-content-list li{
+  padding: 3px 0;
+}
+/* benefits modal header styling */
+.benefits-modal-header{
+  background-color: var(--clr-primary-2);
+  padding: 5px 0;
+}
+.benefits-modal-header button{
+  display: inline-block;
+  background-color: transparent;
+  padding: 0;
+}
+.benefits-modal-header button i{
+  color: var(--clr-black);
+  font-size: 1.2rem;
+}
+.benefits-modal-header button i:hover{
+  background: -webkit-linear-gradient(45deg,var(--clr-link-blue), var(--clr-link-purple));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.benefits-modal-header h3{
+  display: inline-block;
+  margin-left: 5px;
 }
 /* benefits section modals end */
 /*============
