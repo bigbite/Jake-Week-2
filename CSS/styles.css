@@ -13,6 +13,7 @@ Global Styles
   /* black and white */
   --clr-black: #222;
   --clr-white: #fff;
+  --clr-permanent-white: #fff;
   /* links + buttons */
   --clr-hover: #7ff16b;
   --clr-btn-border:#b6c2ff;
@@ -29,7 +30,7 @@ Global Styles
   --clr-required-red: #c62222;
   --font-roboto-mono: 'Merriweather', serif;
   /* box shadow */
-  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /*==================
 Dark Mode
@@ -38,10 +39,10 @@ Dark Mode
   /* primary shades */
   --clr-primary-1:#5a12c4;
   --clr-primary-2:#6976ba;
-  --clr-primary-3:#b5c6e9;
+  --clr-primary-3:#8394b7;
   /* secondary shades (nav bar/ highlights)*/
   --clr-secondary-1:#353535;
-  --clr-secondary-2:#4d4d4d;
+  --clr-secondary-2:#141414;
   --clr-secondary-3:#bababa;
   /* black and white */
   --clr-black: #fff;
@@ -50,6 +51,10 @@ Dark Mode
   --clr-hover: #7ff16b;
   --clr-btn-border:#b6c2ff;
   --clr-btn-hover:#e2e7ff;
+  /* white to stay white */
+  --clr-permanent-white: #fff;
+  /* box shadow */
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /*=============
 dark mode button
@@ -61,30 +66,15 @@ dark mode button
   width: 80px;
   height: 30px;
   border-radius: 40px;
-  background: var(--clr-lm-light-bg);
+  background: var(--clr-white);
   box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
 }
-/*
-#theme-toggle-btn::before{
-  content: '';
-  position: absolute;
-  height: 26px;
-  width: 26px;
-  background: orangered;
-  border-radius: 50%;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-}
-  */
-
 .theme-toggle-btn-sprite{
   width: 25px;
   height: 25px;
   border-radius: 25px;
   transition: 0.5s linear all;
 }
-
 .theme-state-light{
   background: #ee5f12;
   /*margin: 0 auto 0 5px;*/
@@ -92,7 +82,6 @@ dark mode button
   left: 5px;
   transform: translateX(0%);
 }
-
 .theme-state-dark{
   background: #000000;
   /*margin: 0 5px 0 auto;*/
@@ -113,10 +102,12 @@ h1,h2,h3{
 }
 body{
   background-color: var(--clr-white);
+  color: var(--clr-black);
   overscroll-behavior-y: none;
 }
 .regular-btn{
   background: transparent;
+  color: var(--clr-black);
   padding: 4px 8px;
   border-radius: 5px;
   font-family: var(--font-roboto-mono);
@@ -136,7 +127,7 @@ navigation bar
 ==================*/
 header{
   background: linear-gradient(180deg,var(--clr-secondary-1),var(--clr-secondary-2));
-  box-shadow: 0 0 20px var(--clr-black);
+  box-shadow: var(--box-shadow);
   display: grid;
   align-items: center;
   text-align: center;
@@ -149,7 +140,7 @@ header{
   grid-column: 1/2;
 }
 .nav-title-container h1{
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
   font-size: 25px;
   font-weight: 400;
 }
@@ -166,10 +157,10 @@ nav{
 }
 nav a{
   font-size: 25px;
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
   text-decoration: none;
   padding:0 10px;
-  border-right: 2px solid var(--clr-white);
+  border-right: 2px solid var(--clr-permanent-white);
 }
 nav a:hover{
   color: var(--clr-hover);
@@ -182,7 +173,7 @@ footer{
   background: linear-gradient(180deg,var(--clr-secondary-2),var(--clr-secondary-1));
   text-align: center;
   padding: 20px 0;
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -335,7 +326,7 @@ section.resources-intro{
 .intro-text h1{
   font-size: 45px;
   text-shadow: 1px 1px 4px var(--clr-secondary-1), -1px -1px 4px var(--clr-secondary-2);
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
 }
 /*===============
 info paragraph
@@ -420,7 +411,7 @@ helplines dropdown section
 .dropdown-header{
   border-radius: 10px;
   padding: 5px;
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
   box-shadow: var(--box-shadow);
 }
 /* toggle visibility */
@@ -562,7 +553,7 @@ form{
 contact information section
 ===============*/
 .contact-information-section{
-  background-color: #f3f5ff;
+  background-color: var(--clr-primary-3);
   padding: 25px 30px;
   width: 35%;
 }
@@ -600,13 +591,14 @@ social media section
 /* social media icons */
 .social-media-item {
   font-size: 1.1rem;
+  text-decoration: none;
 }
 /* facebook */
 .facebook-item i{
   color: #3240de;
 }
 /* twitter */
-.twitter-item{
+.twitter-item i{
   color: #222;
 }
 /* instagram */
@@ -615,6 +607,3 @@ social media section
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/*================
-theme toggle btn
-================*/
