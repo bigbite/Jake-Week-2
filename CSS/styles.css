@@ -432,7 +432,6 @@ page container (in order to achieve left | right)
 .contact-page-container{
   display: flex;
   justify-content: center;
-  margin-bottom: 110px;
 }
 /*============
 form section
@@ -532,4 +531,13 @@ social media section
   background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+/*===============
+contact.html footer
+===============*/
+.contact-page-footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
