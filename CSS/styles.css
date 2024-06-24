@@ -3,7 +3,7 @@ Global Styles
 ============*/
 :root{
   /* primary shades */
-  --clr-primary-1:#abc2a5;
+  --clr-primary-1:#5a12c4;
   --clr-primary-2:#e2e7ff;
   --clr-primary-3:#fcfdff;
   /* secondary shades (nav bar/ highlights)*/
@@ -15,14 +15,22 @@ Global Styles
   --clr-white: #fff;
   /* links + buttons */
   --clr-hover: #7ff16b;
-  --clr-btn-border:#7c92ff;
-  --clr-btn-hover:#dfe4ff;
-
+  --clr-btn-border:#b6c2ff;
+  --clr-btn-hover:#e2e7ff;
+  /* dropdown content colors */
+  --clr-dropdown-samaritans: #3fa735;
+  --clr-dropdown-mind: #4550b4;
+  --clr-dropdown-shout: #922faa;
   /* Font Variables*/
+  /* links */
+  --clr-link-purple: #dd22ee;
+  --clr-link-blue: #6a46f8;
   --font-roboto-mono: 'Roboto Mono', monospace;
   --font-roboto-serif: 'Roboto', sans-serif;
+  /* box shadow */
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-*,*::after,*::before{
+*{
   font-family: var(--font-roboto-serif);
   box-sizing: border-box;
   margin: 0;
@@ -46,6 +54,10 @@ body{
 }
 .regular-btn:hover{
   background: var(--clr-btn-hover);
+}
+.bold-p-text{
+  font-weight: 600;
+  letter-spacing: 0.1rem;
 }
 /*==================
 navigation bar
@@ -136,7 +148,7 @@ benefits section
 ==============*/
 section.benefits{
   background: var(--clr-primary-2);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
 }
 section.benefits h2{
   text-align: center;
@@ -158,7 +170,7 @@ section.benefits h2{
   max-width: 400px;
   background: var(--clr-white);
   border: 1px solid var(--clr-secondary-1);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
   padding: 10px;
   border-radius: 10px;
 }
@@ -177,7 +189,6 @@ section.benefits h2{
 /*=================
 benefits section modal
 =================*/
-
 /*============
 tips section
 ============*/
@@ -209,4 +220,199 @@ section.tips h2{
   background: var(--clr-primary-2);
   transform: scale(1.1);
   transition: 0.25s;
+}
+
+/*============================
+RESOURCES.HTML
+============================*/
+
+/*==============
+resources-introduction
+==============*/
+section.resources-intro{
+  background-image: url(../resources-images/support-group-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-text{
+  width: 60%;
+  height: 150px;
+  backdrop-filter: blur(10px) saturate(20%);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-text h1{
+  font-size: 45px;
+  text-shadow: 1px 1px 4px var(--clr-secondary-1), -1px -1px 4px var(--clr-secondary-2);
+  color: var(--clr-white);
+}
+/*===============
+info paragraph
+===============*/
+.info-paragraph{
+  margin: 50px 200px 0;
+  text-align: center;
+}
+.info-paragraph h3{
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+/*======================
+helplines dropdown section
+======================*/
+.helplines{
+  margin: 50px 0 100px 0;
+}
+.helplines h2{
+  text-align: center;
+  margin: 25px 0;
+}
+.helplines-dropdown-container{
+  display: flex;
+  align-content: center;
+  justify-content:center;
+  gap: 75px;
+}
+.dropdown-btn{
+  width: 400px;
+}
+.dropdown-btn img{
+  max-width: 100%;
+  height: 80px;
+}
+/* individual content styling (colors) */
+/* samaritans */
+.dropdown-btn-samaritans{
+  background-color: var(--clr-dropdown-samaritans);
+}
+/* mind */
+.dropdown-btn-mind{
+  background-color: var(--clr-dropdown-mind);
+}
+/* giveusashout */
+.dropdown-btn-shout{
+  background-color: var(--clr-dropdown-shout);
+}
+.dropdown-btn{
+  display: block;
+  text-align: center;
+  width: 400px;
+  height: fit-content;
+  padding-top: 10px;
+}
+/* display show */
+.dropdown-content-show{
+  display: block;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+  /*transition: .5s linear;*/
+}
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+.dropdown-content-show div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--clr-secondary-3);
+}
+.dropdown-header{
+  border-radius: 10px;
+  padding: 5px;
+  color: var(--clr-white);
+  box-shadow: var(--box-shadow);
+}
+/* toggle visibility */
+.dropdown-content-hide{
+  display: block;
+  height: 0;
+  opacity: 0;
+}
+/*==================
+educational section
+==================*/
+.educational{
+  margin: 0 100px;
+  border-top: 2px solid var(--clr-black);
+  border-bottom: 2px solid var(--clr-black);
+}
+.education-container{
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.education-container img{
+  max-width: 30%;
+  box-shadow: var(--box-shadow);
+}
+.education-container-details{
+  margin: 5px 15px;
+}
+.education-container-details h3{
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+}
+.education-container-details p{
+  margin: 10px 0 20px 0;
+}
+.education-container-details a{
+  text-decoration: none;
+  color: var(--clr-white);
+  background-image: linear-gradient(45deg,var(--clr-link-blue),var(--clr-link-purple));
+  box-shadow: var(--box-shadow);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/*=================
+treatments section
+=================*/
+.treatments{
+  margin: 50px 100px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.treatments-container{
+  text-align: center;
+  border-top: 1px solid var(--clr-black);
+  border-bottom: 1px solid var(--clr-black);
+  padding: 10px 0;
+  width: 30%;
+}
+.treatments-container:hover{
+  transform: scale(1.1);
+  transition: 0.25s;
+}
+.treatments-container img{
+  width: 100%;
+  margin: 30px 0;
+}
+.treatments-container a{
+  text-decoration: none;
+  color: var(--clr-white);
+  background-image: linear-gradient(45deg,var(--clr-link-blue),var(--clr-link-purple));
+  padding: 5px 40px;
+  border-radius: 5px;
+}
+.treatments-container div{
+  margin: 15px 0;
 }
