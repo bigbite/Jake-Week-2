@@ -28,6 +28,8 @@ Global Styles
   /* required red */
   --clr-required-red: #c62222;
   --font-roboto-mono: 'Merriweather', serif;
+  /* box shadow */
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }
 *{
   font-family: var(--font-roboto-mono);
@@ -147,7 +149,7 @@ benefits section
 ==============*/
 section.benefits{
   background: var(--clr-primary-2);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
 }
 section.benefits h2{
   text-align: center;
@@ -169,7 +171,7 @@ section.benefits h2{
   max-width: 400px;
   background: var(--clr-white);
   border: 1px solid var(--clr-secondary-1);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
   padding: 10px;
   border-radius: 10px;
 }
@@ -234,7 +236,7 @@ section.resources-intro{
   background-size: cover;
   height: 500px;
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,7 +245,7 @@ section.resources-intro{
   width: 60%;
   height: 150px;
   backdrop-filter: blur(10px) saturate(20%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,7 +339,7 @@ helplines dropdown section
   border-radius: 10px;
   padding: 5px;
   color: var(--clr-white);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
 }
 /* toggle visibility */
 .dropdown-content-hide{
@@ -361,7 +363,7 @@ educational section
 }
 .education-container img{
   max-width: 30%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
 }
 .education-container-details{
   margin: 5px 15px;
@@ -376,7 +378,7 @@ educational section
   text-decoration: none;
   color: var(--clr-white);
   background-image: linear-gradient(45deg,var(--clr-link-blue),var(--clr-link-purple));
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--box-shadow);
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -438,7 +440,6 @@ form section
 ============*/
 form{
   width: 45%;
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
   background-color: var(--clr-primary-2);
   padding: 0 20px;
 }
@@ -541,3 +542,6 @@ contact.html footer
   left: 0;
   right: 0;
 }
+/*================
+theme toggle btn
+================*/

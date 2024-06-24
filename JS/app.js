@@ -19,6 +19,32 @@ dropDownBtns.forEach(function (dropDownBtn) {
   });
 });
 */
+
+function handleDropdownClick(dropDownContent) {
+  if (dropDownContent.classList.contains('dropdown-content-show')) {
+    dropDownContent.classList.add('dropdown-content-hide');
+    dropDownContent.classList.remove('dropdown-content-show');
+  } else {
+    dropDownContent.classList.remove('dropdown-content-hide');
+    dropDownContent.classList.add('dropdown-content-show');
+  }
+}
+
+dropDownBtns.forEach(function (dropDownBtn) {
+  dropDownBtn.addEventListener('click', function () {
+    if (dropDownBtn.classList.contains('dropdown-btn-samaritans')) {
+      handleDropdownClick(dropDownContentSamaritans);
+    } else if (dropDownBtn.classList.contains('dropdown-btn-mind')) {
+      handleDropdownClick(dropDownContentMind);
+    } else if (dropDownBtn.classList.contains('dropdown-btn-shout')) {
+      handleDropdownClick(dropDownContentShout);
+    }
+  });
+});
+
+/*
+changed functionality to reduce size but also increase reusability
+
 dropDownBtns.forEach(function (dropDownBtn) {
   dropDownBtn.addEventListener('click', function () {
     if (dropDownBtn.classList.contains('dropdown-btn-samaritans')) {
@@ -48,3 +74,4 @@ dropDownBtns.forEach(function (dropDownBtn) {
     }
   });
 });
+ */
