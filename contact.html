@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact | Mental Health Awareness</title>
+	<!-- fonts -->
+	<!-- merriweather -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/97d0e9d86c.js" crossorigin="anonymous"></script>
+	<!-- css -->
+	<link rel="stylesheet" href="CSS/styles.css">
+	<!-- javascript -->
+	<script src="js/contact.js" defer></script>
+</head>
+
+<body>
+	<!-- header / nav bar -->
+	<header>
+		<div class="nav-title-container">
+			<h1>Mental Health Awareness</h1>
+		</div>
+		<div class="nav-logo-container">
+			<img src="images/green-health-logo.png">
+		</div>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="resources.html">Resources</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+	<!-- contact us intro -->
+	<section class="contact-intro">
+		<h1>Get in touch with us:</h1>
+	</section>
+	<!-- page container left / right -->
+	<section class="contact-page-container">
+		<!-- social media / contact us section -->
+		<div class="contact-information-section">
+			<p>We'd love to hear from you! Whether you have a question about our resources, a suggestion for new content, or just want to share your feedback, feel free to reach out. Your input is valuable in helping us promote mental health awareness and support.</p>
+			<!-- contact info -->
+			<div class="contact-info-container">
+				<div class="contact-info-item">
+					<i class="fa-solid fa-envelope"></i>
+					<label for="email">Email</label>
+					<p>info@mentalhealthawareness.com</p>
+				</div>
+				<div class="contact-info-item">
+					<i class="fa-solid fa-phone"></i>
+					<label for="phone">Phone</label>
+					<p>(123) 456-7890</p>
+				</div>
+				<div class="contact-info-item">
+					<i class="fa-solid fa-location-dot"></i>
+					<label for="address">Address</label>
+					<p>123 Wellness Ave, Mindful City, Health State, 78901</p>
+				</div>
+			</div>
+			<!-- social media -->
+			<div class="social-media-container">
+				<h3>Follow us on Social Media!</h3>
+				<div class="social-media-item facebook-item">
+					<a href="https://www.facebook.com/">
+						<i class="fa-brands fa-square-facebook"></i>
+						<p>Mental Health Awareness</p>
+					</a>
+				</div>
+				<div class="social-media-item twitter-item">
+					<a href="https://www.x.com">
+						<i class="fa-brands fa-square-x-twitter"></i>
+						<p>@MentalHealthAwareness</p>
+					</a>
+				</div>
+				<div class="social-media-item instagram-item">
+					<a href="https://www.instagram.com">
+						<i class="fa-brands fa-square-instagram"></i>
+						<p>@MentalHealthAwareness</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- form section-->
+		<form>
+			<div class="contact-form-group">
+				<label for="name">Full Name<span class="required-red"> *</span></label>
+				<br>
+				<input class="contact-input" id='user-name' type="text" name="user_name" required>
+				<br>
+				<span class="contact-form-subheading" id="name-input-subheading">Minimum 5 characters</span>
+			</div>
+			<div class="contact-form-group">
+				<label for=" email">Email<span class="required-red"> *</span></label>
+				<br>
+				<input class="contact-input" id='user-email' type="email" name="user_email" required>
+				<br>
+				<span class="contact-form-subheading" id="email-input-subheading">Maximum of 255 characters, includes '@' </span>
+			</div>
+			<div class="contact-form-group">
+				<label for="message">Reason for contacting us<span class="required-red"> *</span></label>
+				<br>
+				<textarea class="contact-input-textarea" id='user-message' name="user_message" required></textarea>
+				<br>
+				<span class="contact-form-subheading" id="msg-input-subheading" ">Minimum 50 characters, maximum of 500 characters</span>
+			</div>
+			<div class=" contact-form-group contact-checkbox">
+					<label>Please accept our Terms & Conditions<span class=" required-red"> *</span></label>
+					<br>
+					<input id="user-checkbox" type="checkbox" name="terms_and_conditions" required>
+					<br>
+					<span class="contact-form-subheading" id="checkbox-subheading">This checkbox must be ticked</span>
+			</div>
+			<div class="contact-form-group contact-submit-btn">
+				<input type="submit" id="submit-btn" class="submit-btn" disabled>
+			</div>
+		</form>
+	</section>
+	<footer class="contact-footer">
+		<p>&copy; 2024 Mental Health Awareness. All rights reserved.</p>
+	</footer>
+</body>
+
+</html>

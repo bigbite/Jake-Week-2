@@ -19,7 +19,6 @@ dropDownBtns.forEach(function (dropDownBtn) {
   });
 });
 */
-
 function handleDropdownClick(dropDownContent) {
   if (dropDownContent.classList.contains('dropdown-content-show')) {
     dropDownContent.classList.add('dropdown-content-hide');
