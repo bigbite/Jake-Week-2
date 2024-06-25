@@ -13,6 +13,7 @@ Global Styles
   /* black and white */
   --clr-black: #222;
   --clr-white: #fff;
+  --clr-permanent-white: #fff;
   /* links + buttons */
   --clr-hover: #7ff16b;
   --clr-btn-border:#b6c2ff;
@@ -31,6 +32,65 @@ Global Styles
   /* box shadow */
   --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+/*==================
+Dark Mode
+==================*/
+.is-dark-mode{
+  /* primary shades */
+  --clr-primary-1:#5a12c4;
+  --clr-primary-2:#6976ba;
+  --clr-primary-3:#576b93;
+  /* secondary shades (nav bar/ highlights)*/
+  --clr-secondary-1:#353535;
+  --clr-secondary-2:#141414;
+  --clr-secondary-3:#bababa;
+  /* black and white */
+  --clr-black: #fff;
+  --clr-white: #222;
+  /* links + buttons */
+  --clr-hover: #7ff16b;
+  --clr-btn-border:#b6c2ff;
+  --clr-btn-hover:#e2e7ff;
+  /* white to stay white */
+  --clr-permanent-white: #fff;
+  /* box shadow */
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*=============
+dark mode button
+=============*/
+.theme-toggle-btn{
+  position: relative;
+  margin-right: 50px;
+  border: 0;
+  width: 80px;
+  height: 30px;
+  border-radius: 40px;
+  background: var(--clr-white);
+  box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+}
+.theme-toggle-btn-sprite{
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  transition: 0.5s linear all;
+}
+.theme-state-light{
+  background: #ee5f12;
+  /*margin: 0 auto 0 5px;*/
+  top: 50%;
+  left: 5px;
+  transform: translateX(0%);
+}
+.theme-state-dark{
+  background: #000000;
+  /*margin: 0 5px 0 auto;*/
+  top: 50%;
+  left: 5px;
+  transform: translateX(180%);
+}
+/* dark mode button end*/
+
 *{
   font-family: var(--font-roboto-mono);
   box-sizing: border-box;
@@ -42,10 +102,12 @@ h1,h2,h3{
 }
 body{
   background-color: var(--clr-white);
+  color: var(--clr-black);
   overscroll-behavior-y: none;
 }
 .regular-btn{
   background: transparent;
+  color: var(--clr-black);
   padding: 4px 8px;
   border-radius: 5px;
   font-family: var(--font-roboto-mono);
@@ -60,12 +122,19 @@ body{
   font-weight: 600;
   letter-spacing: 0.1rem;
 }
+.bold-p-text-modal{
+  font-weight: 600;
+}
+.small-p-text-modal{
+  font-weight: 500;
+  font-size: 0.75rem;
+}
 /*==================
 navigation bar
 ==================*/
 header{
   background: linear-gradient(180deg,var(--clr-secondary-1),var(--clr-secondary-2));
-  box-shadow: 0 0 20px var(--clr-black);
+  box-shadow: var(--box-shadow);
   display: grid;
   align-items: center;
   text-align: center;
@@ -78,7 +147,7 @@ header{
   grid-column: 1/2;
 }
 .nav-title-container h1{
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
   font-size: 25px;
   font-weight: 400;
 }
@@ -95,10 +164,10 @@ nav{
 }
 nav a{
   font-size: 25px;
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
   text-decoration: none;
   padding:0 10px;
-  border-right: 2px solid var(--clr-white);
+  border-right: 2px solid var(--clr-permanent-white);
 }
 nav a:hover{
   color: var(--clr-hover);
@@ -111,9 +180,20 @@ footer{
   background: linear-gradient(180deg,var(--clr-secondary-2),var(--clr-secondary-1));
   text-align: center;
   padding: 20px 0;
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
+/*=====
+contact.html footer
+=====*/
+.contact-page-footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 /*=========================
 INDEX.HTML
 ===========================*/
@@ -188,8 +268,78 @@ section.benefits h2{
   padding: 10px 0;
 }
 /*=================
-benefits section modal
+benefits section modals
 =================*/
+/* hidden by default */
+.benefits-modal-container-hide{
+  display: none;
+}
+.benefits-modal-hide{
+  display: none;
+}
+/* modal styling */
+.benefits-modal-container-show{
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  align-content: center;
+}
+.benefits-modal-show{
+  background-color: var(--clr-white);
+  margin: 0 auto;
+  width: 55%;
+  border: solid var(--clr-primary-2);
+  border-width: 0 5px 5px 5px;
+  border-radius: 5px;
+}
+/*==============
+benefits modal content styling
+==============*/
+.benefits-modal-content-intro{
+  padding: 20px 10px;
+  font-weight: 200;
+  line-height: 1.4rem;
+}
+.benefits-modal-content-summary{
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 15px 5px;
+}
+.benefits-modal-content-list{
+  padding-bottom: 20px;
+  font-weight: 300;
+}
+.benefits-modal-content-list li{
+  padding: 3px 0;
+}
+/* benefits modal header styling */
+.benefits-modal-header{
+  background-color: var(--clr-primary-2);
+  padding: 5px 0;
+}
+.benefits-modal-header button{
+  display: inline-block;
+  background-color: transparent;
+  padding: 0;
+}
+.benefits-modal-header button i{
+  color: var(--clr-black);
+  font-size: 1.2rem;
+}
+.benefits-modal-header button i:hover{
+  background: -webkit-linear-gradient(45deg,var(--clr-link-blue), var(--clr-link-purple));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.benefits-modal-header h3{
+  display: inline-block;
+  margin-left: 5px;
+}
+/* benefits section modals end */
 /*============
 tips section
 ============*/
@@ -253,7 +403,7 @@ section.resources-intro{
 .intro-text h1{
   font-size: 45px;
   text-shadow: 1px 1px 4px var(--clr-secondary-1), -1px -1px 4px var(--clr-secondary-2);
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
 }
 /*===============
 info paragraph
@@ -338,7 +488,7 @@ helplines dropdown section
 .dropdown-header{
   border-radius: 10px;
   padding: 5px;
-  color: var(--clr-white);
+  color: var(--clr-permanent-white);
   box-shadow: var(--box-shadow);
 }
 /* toggle visibility */
@@ -434,14 +584,12 @@ page container (in order to achieve left | right)
 .contact-page-container{
   display: flex;
   justify-content: center;
-  margin-bottom: 110px;
 }
 /*============
 form section
 ============*/
 form{
   width: 45%;
-  /*box-shadow: var(--box-shadow);*/
   background-color: var(--clr-primary-2);
   padding: 0 20px;
 }
@@ -482,7 +630,7 @@ form{
 contact information section
 ===============*/
 .contact-information-section{
-  background-color: #f3f5ff;
+  background-color: var(--clr-primary-3);
   padding: 25px 30px;
   width: 35%;
 }
@@ -520,13 +668,14 @@ social media section
 /* social media icons */
 .social-media-item {
   font-size: 1.1rem;
+  text-decoration: none;
 }
 /* facebook */
 .facebook-item i{
   color: #3240de;
 }
 /* twitter */
-.twitter-item{
+.twitter-item i{
   color: #222;
 }
 /* instagram */

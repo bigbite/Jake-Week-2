@@ -16,6 +16,10 @@
 	<link rel="stylesheet" href="CSS/styles.css">
 	<!-- javascript -->
 	<script src="js/app.js" defer></script>
+	<!-- light / dark mode theme -->
+	<script src="js/theme.js" defer></script>
+	<!-- index modals -->
+	<script src="js/indexModals.js" defer></script>
 </head>
 
 <body>
@@ -48,25 +52,75 @@
 			<div class="benefit-card">
 				<h3>Reduced Stigma</h3>
 				<p>Raising awareness helps reduce the stigma associated with mental health conditions, making it easier for individuals to seek help.</p>
-				<button id="benefits-btn-stigma" class="regular-btn">learn more</button>
+				<button id="benefits-btn-stigma" class="regular-btn modal-stigma benefits-modal-btn">learn more</button>
 			</div>
 			<div class="benefit-card">
 				<h3>Improved Well-being</h3>
 				<p>Understanding mental health promotes better overall well-being and can prevent mental health issues from worsening.</p>
-				<button id="benefits-btn-wellbeing" class="regular-btn">learn more</button>
+				<button id="benefits-btn-wellbeing" class="regular-btn modal-wellbeing benefits-modal-btn">learn more</button>
 			</div>
 			<div class="benefit-card">
 				<h3>Enhanced Support</h3>
 				<p>Awareness leads to better support systems within communities, workplaces, and schools, providing help to those in need.</p>
-				<button id="benefits-btn-support" class="regular-btn">learn more</button>
+				<button id="benefits-btn-support" class="regular-btn modal-support benefits-modal-btn">learn more</button>
 			</div>
 		</div>
 	</section>
 	<!-- benefits of mental health modals (hidden by default) -->
-	<section class="benefits-modal-container">
-		<div id="modal-stigma" class="benefits-modal"></div>
-		<div id="modal-wellbeing" class="benefits-modal"></div>
-		<div id="modal-support" class="benefits-modal"></div>
+	<section id="modal-container" class="benefits-modal-container-hide">
+		<div id="modal-stigma" class="benefits-modal-hide modal-stigma">
+			<!-- reduced stigma modal -->
+			<div class="benefits-modal-header">
+				<button class="close-modal-stigma benefits-modal-close-btn"><i class="fa-solid fa-circle-xmark"></i></button>
+				<h3>Helping to Reduce Stigma</h3>
+			</div>
+			<p class="benefits-modal-content-intro">There are many reasons why people develop mental illness. Some are <span class="bold-p-text-modal">genetic or biological</span>. Some are a result of <span class="bold-p-text-modal">childhood trauma or overwhelming stress at school, work or home</span>. Some stem from <span class="bold-p-text-modal">environmental injustice or violence</span>. Sometimes, we simply don't know. Regardless of the reasons, <span class="bold-p-text-modal">these are health problems</span> just like cancer, arthritis or diabetes. So why does society look at people with <span class="bold-p-text-modal">mental health illness</span> differently? The answer is Stigma. <span class="bold-p-text-modal">The real question however, is how do we stop it?</span></p>
+			<p class="benefits-modal-content-summary">To stop stigma, we first need to understand the effects it has on people with mental health issues :</p>
+			<ul class="benefits-modal-content-list">
+				<li>Stigma prevents roughly 40% of people with anxiety or depression from seeking medical help</li>
+				<li>Lack of understanding by family, friends, coworkers, or others can destroy relationships and friendships</li>
+				<li>The belief that you'll never succeed at certain challenges or that you can't improve your situation.</li>
+				<li>Bullying, physical violence or harassment.</li>
+			</ul>
+			<p class="benefits-modal-content-summary">Now we understand the consequences, what can we do to begin removing this long upheld stigma surrounding mental health issues :</p>
+			<ul class="benefits-modal-content-list">
+				<li>Be aware of your attitudes and behaviour. Examine your own judgmental thinking, reinforced by upbringing and society.</li>
+				<li>Support people. Treat everyone with dignity and respect; offer support and encouragement.</li>
+				<li>Choose your words carefully. The way we speak can affect the attitudes of others.</li>
+				<li>Include everyone. It's against the law to deny jobs or services to anyone with these health issues.</li>
+			</ul>
+		</div>
+		<!-- improved wellbeing modal -->
+		<div id="modal-wellbeing" class="benefits-modal-hide modal-wellbeing">
+			<div class="benefits-modal-header">
+				<button class="close-modal-wellbeing benefits-modal-close-btn"><i class="fa-solid fa-circle-xmark"></i></button>
+				<h3>Improved Well-being</h3>
+			</div>
+			<p class="benefits-modal-content-intro"><span class="bold-p-text-modal">“Mental health"</span> refers to your overall psychological well-being. It includes the way you <span class="bold-p-text-modal">feel about yourself</span>, <span class="bold-p-text-modal">the quality of your relationships</span>, and <span class="bold-p-text-modal">your ability to manage your feelings and deal with difficulties</span>.Anyone can experience <span class="bold-p-text-modal">mental or emotional</span> health problems — and over a lifetime, many of us will. According to the Centre for Addiction and Mental Health, <span class="bold-p-text-modal">one in five Canadians</span> experiences a mental illness in any given year. And by the time Canadians reach 40 years old, <span class="bold-p-text-modal">one in two people</span> have, or have had, a mental illness.</p>
+			<p class="benefits-modal-content-summary">Below are some ways that have been proven to improve mental wellbeing :</p>
+			<ul class="benefits-modal-content-list">
+				<li class="bold-p-text-modal">Ensure to make regular social connection, especially face-to-face, a priority. <br><span class="small-p-text-modal">Phone calls and social networks have their place, but few things can beat the stress-busting, mood-boosting power of quality face-to-face time with other people, especially those you love and people who energize you. For several years, COVID-19 significantly limited this opportunity, however as restrictions continue to lift, this may be a good time to rebuild safe in-person interactions.</span></li>
+				<li class="bold-p-text-modal">Stay active <br><span class="small-p-text-modal">Staying active is as good for the brain as it is for the body. Regular exercise or activity can have a major impact on your mental and emotional health, relieve stress, improve memory, and help you sleep better.</span></li>
+				<li class="bold-p-text-modal">Appeal to your senses <br><span class="small-p-text-modal">Does listening to an uplifting song make you feel calm? Does squeezing a stress ball help you feel centred? What about taking a walk in nature and enjoying the sights and sounds of the trees? Everyone responds to sensory input a little differently, so experiment with healthy sensory inputs (rather than unhealthy sensory inputs) to find what works best for you.</span></li>
+				<li class="bold-p-text-modal">Eat a brain-healthy diet to support strong mental health <br><span class="small-p-text-modal">Foods that may support your mood include beans, legumes (e.g., lentils), fatty fish rich in omega-3s, nuts (e.g., walnuts, almonds, cashews and peanuts), avocados, dark leafy greens (e.g., spinach, kale and Brussels sprouts), and fruit (e.g., blueberries). Dark chocolate has also been found to be potentially beneficial for mental health. For the best dietary and nutritional advice, talk to a registered dietician.</span></li>
+			</ul>
+		</div>
+		<!-- enhanced support modal -->
+		<div id="modal-support" class="benefits-modal-hide modal-support">
+			<div class="benefits-modal-header">
+				<button class="close-modal-support benefits-modal-close-btn"><i class="fa-solid fa-circle-xmark"></i></button>
+				<h3>Enhanced Support</h3>
+			</div>
+			<p class="benefits-modal-content-intro">Who can benefit from Mental Health Support? <span class="bold-p-text-modal">Everyone!</span> Nearly <span class="bold-p-text-modal">one in five</span> adults in the US has a mental health condition. But that one person has <span class="bold-p-text-modal">family, friends, and others whose lives are touched by their condition</span>, even if they don't themselves suffer from one. You might be surprised by the prevalence of <span class="bold-p-text-modal">mental health conditions</span> in adults in the US :</p>
+			<ul class="benefits-modal-content-list">
+				<li><span class="bold-p-text-modal">48 million have an anxiety disorder</span></li>
+				<li><span class="bold-p-text-modal">21 million have major depression</span></li>
+				<li><span class="bold-p-text-modal">9 million have post-traumatic stress disorder</span></li>
+				<li><span class="bold-p-text-modal">7 million have bipolar disorder</span></li>
+				<li><span class="bold-p-text-modal">3.5 million have borderline personality disorder</span></li>
+			</ul>
+			<p class="benefits-modal-content-intro">The more awareness we can spread, furthering the understanding and knowledge the average individual has on Mental Health Disorders, the more <span class="bold-p-text-modal">physical and educational support</span> organisations can give to those who need it!</p>
+		</div>
 	</section>
 	<!-- Tips list + images -->
 	<section class="tips">
@@ -122,6 +176,9 @@
 	</section>
 	<footer>
 		<p>&copy; 2024 Mental Health Awareness. All rights reserved.</p>
+		<button id="theme-toggle-btn" class="theme-toggle-btn">
+			<div id="theme-toggle-btn-sprite" class="theme-toggle-btn-sprite theme-state-light"></div>
+		</button>
 	</footer>
 </body>
 

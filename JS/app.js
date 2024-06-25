@@ -19,6 +19,7 @@ dropDownBtns.forEach(function (dropDownBtn) {
   });
 });
 */
+
 function handleDropdownClick(dropDownContent) {
   if (dropDownContent.classList.contains('dropdown-content-show')) {
     dropDownContent.classList.add('dropdown-content-hide');
@@ -40,3 +41,18 @@ dropDownBtns.forEach(function (dropDownBtn) {
     }
   });
 });
+
+/*
+changed functionality to reduce size but also increase reusability
+dropDownBtns.forEach(function (dropDownBtn) {
+  dropDownBtn.addEventListener('click', function () {
+    if (dropDownBtn.classList.contains('dropdown-btn-samaritans')) {
+      handleDropdownClick(dropDownContentSamaritans);
+    } else if (dropDownBtn.classList.contains('dropdown-btn-mind')) {
+      handleDropdownClick(dropDownContentMind);
+    } else if (dropDownBtn.classList.contains('dropdown-btn-shout')) {
+      handleDropdownClick(dropDownContentShout);
+    }
+  });
+});
+ */
